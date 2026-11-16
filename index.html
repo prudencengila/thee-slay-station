@@ -3,129 +3,926 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stormi's Slay Station | Lipgloss & Sunglasses</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Thee-Slay-station | Premium Perfumes in Uganda</title>
+    
+    <!-- Font Awesome Icons (No AI icons, strictly fas fa-...) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #0A2647;
+            --secondary-blue: #144272;
+            --accent-blue: #2C74B3;
+            --light-blue: #E8F1F5;
+            --white: #FFFFFF;
+            --text-dark: #1a1a1a;
+            --text-gray: #555555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-blue);
+        }
+
+        /* Top Banner */
+        .top-banner {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .top-banner i {
+            margin-right: 8px;
+            color: #FFD700;
+        }
+
+        .top-banner strong {
+            color: #FFD700;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(10, 38, 71, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+            color: var(--primary-blue);
+        }
+
+        .nav-icons i {
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-icons i:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 38, 71, 0.7), rgba(20, 66, 114, 0.7)), url('https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=1600&h=900&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 35px;
+            background-color: var(--accent-blue);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--accent-blue);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(10, 38, 71, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--light-blue);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(10, 38, 71, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background-color: var(--light-blue);
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--primary-blue);
+        }
+
+        .product-info .price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background-color: var(--accent-blue);
+        }
+
+        .add-to-cart i {
+            margin-right: 8px;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--light-blue);
+            max-width: 100%;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(10, 38, 71, 0.1);
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .contact-card {
+            padding: 30px;
+            background: var(--light-blue);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card i {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-card p, .contact-card a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .contact-card a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 50px 20px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #B0C4DE;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            color: #B0C4DE;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
-        <div class="logo">Stormi's <span>Slay Station</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#" class="cart-btn">🛍️ Cart (0)</a></li>
-        </ul>
+    
+    <div class="top-banner">
+        <i class="fas fa-truck"></i> Complimentary delivery on orders over 300,000 UGX | Use code: <strong>slay25</strong>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">Thee-<span>Slay</span>-station</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#women">Women's Collection</a></li>
+                <li><a href="#men">Men's Collection</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header id="home" class="hero">
+    
+    <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Gloss Up. Slay On.</h1>
-            <p>Discover premium lipglosses & chic sunglasses made for queens who mean business.</p>
-            <a href="#shop" class="btn">Shop the Collection</a>
+            <h1>Discover Your Signature Scent</h1>
+            <p>Premium perfumes for both men and women. Elevate your presence with Thee-Slay-station's exclusive collection in Kampala.</p>
+            <a href="#women" class="btn">Shop Women's</a>
+            <a href="#men" class="btn" style="background: transparent; border: 2px solid white; margin-left: 10px;">Shop Men's</a>
         </div>
-    </header>
+    </section>
 
-    <!-- FEATURED PRODUCTS -->
-    <section id="shop" class="products">
-        <h2 class="section-title">Best Sellers ✨</h2>
+    <section id="women">
+        <div class="section-title">
+            <h2>Women's Collection</h2>
+            <p>Elegant, captivating, and unforgettable fragrances designed for the modern woman.</p>
+        </div>
         <div class="product-grid">
-
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500" alt="Pink Lipgloss">
-                <h3>Rose Gold Gloss</h3>
-                <p class="price">$18.99</p>
-                <button class="add-btn">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=400&fit=crop" alt="Midnight Rose" class="product-image">
+                <div class="product-info">
+                    <h3>Midnight Rose</h3>
+                    <div class="price">120,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
             </div>
-
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500" alt="Cat Eye Sunglasses">
-                <h3>Golden Cat Eye</h3>
-                <p class="price">$45.00</p>
-                <button class="add-btn">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop" alt="Jasmine Dreams" class="product-image">
+                <div class="product-info">
+                    <h3>Jasmine Dreams</h3>
+                    <div class="price">98,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
             </div>
-
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=500" alt="Nude Lipgloss">
-                <h3>Nude Slay Gloss</h3>
-                <p class="price">$16.50</p>
-                <button class="add-btn">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="Vanilla" class="product-image">
+                <div class="product-info">
+                    <h3>Vanilla</h3>
+                    <div class="price">200,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
             </div>
-
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1577803645773-f96470509666?w=500" alt="Oversized Sunglasses">
-                <h3>Black Lux Shades</h3>
-                <p class="price">$52.00</p>
-                <button class="add-btn">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop" alt="Eclaire" class="product-image">
+                <div class="product-info">
+                    <h3>Eclaire</h3>
+                    <div class="price">170,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
             </div>
-
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1599733589046-833caccbbd03?w=500" alt="Red Lipgloss">
-                <h3>Cherry Bomb Gloss</h3>
-                <p class="price">$19.99</p>
-                <button class="add-btn">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400&h=400&fit=crop" alt="Club de Nuit Woman" class="product-image">
+                <div class="product-info">
+                    <h3>Club de Nuit Woman</h3>
+                    <div class="price">150,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
             </div>
-
+            
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500" alt="Aviator Sunglasses">
-                <h3>Gold Aviators</h3>
-                <p class="price">$38.00</p>
-                <button class="add-btn">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&h=400&fit=crop" alt="Mikaya" class="product-image">
+                <div class="product-info">
+                    <h3>Mikaya</h3>
+                    <div class="price">140,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
             </div>
-
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=400&fit=crop" alt="Intense Woman" class="product-image">
+                <div class="product-info">
+                    <h3>Intense Woman</h3>
+                    <div class="price">250,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop" alt="Yara Pink" class="product-image">
+                <div class="product-info">
+                    <h3>Yara Pink</h3>
+                    <div class="price">100,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="Sublime" class="product-image">
+                <div class="product-info">
+                    <h3>Sublime</h3>
+                    <div class="price">300,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop" alt="Yara White" class="product-image">
+                <div class="product-info">
+                    <h3>Yara White</h3>
+                    <div class="price">450,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400&h=400&fit=crop" alt="Valentino" class="product-image">
+                <div class="product-info">
+                    <h3>Valentino</h3>
+                    <div class="price">900,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&h=400&fit=crop" alt="Prada" class="product-image">
+                <div class="product-info">
+                    <h3>Prada</h3>
+                    <div class="price">1,200,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=400&fit=crop" alt="Creed" class="product-image">
+                <div class="product-info">
+                    <h3>Creed</h3>
+                    <div class="price">1,500,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop" alt="Jadore" class="product-image">
+                <div class="product-info">
+                    <h3>Jadore</h3>
+                    <div class="price">2,000,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="My Way" class="product-image">
+                <div class="product-info">
+                    <h3>My Way</h3>
+                    <div class="price">2,000,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop" alt="YSL" class="product-image">
+                <div class="product-info">
+                    <h3>YSL</h3>
+                    <div class="price">1,500,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400&h=400&fit=crop" alt="Vanilla Powder" class="product-image">
+                <div class="product-info">
+                    <h3>Vanilla Powder</h3>
+                    <div class="price">2,000,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&h=400&fit=crop" alt="Miss Dior" class="product-image">
+                <div class="product-info">
+                    <h3>Miss Dior</h3>
+                    <div class="price">800,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=400&fit=crop" alt="Eclaire Prestige" class="product-image">
+                <div class="product-info">
+                    <h3>Eclaire Prestige</h3>
+                    <div class="price">750,000 UGX</div>
+                    <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="about">
-        <div class="about-text">
-            <h2>About Stormi's</h2>
-            <p>At <strong>Stormi's Slay Station</strong>, we believe every woman deserves to feel fierce. From glossy lips to statement shades, our curated collection is designed to elevate your everyday look and unleash your inner boss.</p>
-            <a href="#shop" class="btn">Explore More</a>
-        </div>
-        <div class="about-img">
-            <img src="https://images.unsplash.com/photo-1522335789203-aaa2f6f0c4b6?w=700" alt="Glamorous woman">
-        </div>
-    </section>
-
-    <!-- NEWSLETTER -->
-    <section class="newsletter">
-        <h2>Join the Slay List 💋</h2>
-        <p>Get 15% off your first order + exclusive drops.</p>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contact" class="footer">
-        <div class="footer-col">
-            <h3>Stormi's Slay Station</h3>
-            <p>Your go-to destination for girly accessories.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Follow Us</h4>
-            <div class="socials">
-                <a href="#">📷 Instagram</a>
-                <a href="#">🎵 TikTok</a>
-                <a href="#">📌 Pinterest</a>
+    <!-- Men's Collection -->
+    <section id="men" style="background-color: var(--light-blue); max-width: 100%;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-title">
+                <h2>Men's Collection</h2>
+                <p>Bold, sophisticated, and commanding fragrances for the distinguished gentleman.</p>
+            </div>
+            <div class="product-grid">
+        
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&h=400&fit=crop" alt="Cedar Noir" class="product-image">
+                    <div class="product-info">
+                        <h3>Cedar Noir</h3>
+                        <div class="price">135,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=400&fit=crop" alt="Ocean Breeze" class="product-image">
+                    <div class="product-info">
+                        <h3>Ocean Breeze</h3>
+                        <div class="price">85,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop" alt="Spice and Smoke" class="product-image">
+                    <div class="product-info">
+                        <h3>Spice and Smoke</h3>
+                        <div class="price">145,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="Blue Horizon" class="product-image">
+                    <div class="product-info">
+                        <h3>Blue Horizon</h3>
+                        <div class="price">172,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop" alt="Intense Man" class="product-image">
+                    <div class="product-info">
+                        <h3>Intense Man</h3>
+                        <div class="price">250,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400&h=400&fit=crop" alt="Club de Nuit Man" class="product-image">
+                    <div class="product-info">
+                        <h3>Club de Nuit Man</h3>
+                        <div class="price">150,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&h=400&fit=crop" alt="Dior Sauvage" class="product-image">
+                    <div class="product-info">
+                        <h3>Dior Sauvage</h3>
+                        <div class="price">300,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=400&fit=crop" alt="9PM" class="product-image">
+                    <div class="product-info">
+                        <h3>9PM</h3>
+                        <div class="price">180,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop" alt="Lattafa Asad" class="product-image">
+                    <div class="product-info">
+                        <h3>Lattafa Asad</h3>
+                        <div class="price">250,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="9PM Rebel" class="product-image">
+                    <div class="product-info">
+                        <h3>9PM Rebel</h3>
+                        <div class="price">170,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop" alt="Stronger With You" class="product-image">
+                    <div class="product-info">
+                        <h3>Stronger With You</h3>
+                        <div class="price">250,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=400&h=400&fit=crop" alt="Amouage Epic Man" class="product-image">
+                    <div class="product-info">
+                        <h3>Amouage Epic Man</h3>
+                        <div class="price">1,000,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+            
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&h=400&fit=crop" alt="Winter Wonder" class="product-image">
+                    <div class="product-info">
+                        <h3>Winter Wonder</h3>
+                        <div class="price">1,500,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=400&h=400&fit=crop" alt="Azzaro Most Wanted" class="product-image">
+                    <div class="product-info">
+                        <h3>Azzaro Most Wanted</h3>
+                        <div class="price">900,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop" alt="Tom Ford" class="product-image">
+                    <div class="product-info">
+                        <h3>Tom Ford</h3>
+                        <div class="price">800,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+        
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="James Bond" class="product-image">
+                    <div class="product-info">
+                        <h3>James Bond</h3>
+                        <div class="price">700,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop" alt="Black Opium" class="product-image">
+                    <div class="product-info">
+                        <h3>Black Opium</h3>
+                        <div class="price">750,000 UGX</div>
+                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <p class="copyright">© 2026 Stormi's Slay Station. All rights reserved.</p>
+    </section >
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div>
+                <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800&h=600&fit=crop" alt="About Thee-Slay-station" class="about-image">
+            </div>
+            <div>
+                <h2>About Thee-Slay-station</h2>
+                <p style="margin: 20px 0; color: var(--text-gray);">
+                    Located in the heart of Ntinda, Kampala, Thee-Slay-station is your premier destination for authentic, high-quality perfumes. We believe that a fragrance is more than just a scent; it is a statement of identity, confidence, and style.
+                </p>
+                <p style="margin-bottom: 20px; color: var(--text-gray);">
+                    Whether you are looking for a subtle daily wear or a bold evening statement, our curated collection for both men and women guarantees you will find your perfect match. Enjoy complimentary delivery on all orders over 300,000 UGX with code <strong>slay25</strong>.
+                </p>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Visit us in Ntinda or reach out through any of our channels below.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Our Location</h3>
+                <p>Ntinda, Kampala<br>Uganda</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Call Us</h3>
+                <a href="tel:0707010203">0707010203</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-globe"></i>
+                <h3>Website</h3>
+                <a href="http://theeslaystation.com" target="_blank">theeslaystation.com</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-clock"></i>
+                <h3>Working Hours</h3>
+                <p>Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: 10:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Thee-Slay-station</h3>
+                <p style="color: #B0C4DE; font-size: 0.9rem;">Your trusted source for premium men's and women's fragrances in Kampala, Uganda.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#women">Women's Perfumes</a></li>
+                    <li><a href="#men">Men's Perfumes</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: #B0C4DE; font-size: 0.9rem; margin-bottom: 15px;">Subscribe for exclusive offers and new arrivals.</p>
+                <form style="display: flex;">
+                    <input type="email" placeholder="Your email" style="padding: 10px; border: none; border-radius: 5px 0 0 5px; width: 100%; outline: none;">
+                    <button type="submit" style="padding: 10px 15px; background: var(--accent-blue); color: white; border: none; border-radius: 0 5px 5px 0; cursor: pointer;"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Thee-Slay-station. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ff6b6b;"></i> in Kampala</p>
+        </div>
     </footer>
 
+    
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-check"></i> Added!';
+                this.style.backgroundColor = '#28a745';
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.style.backgroundColor = '';
+                }, 2000);
+            });
+        });
+    </script>
 </body>
 </html>
