@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 50">
+  <rect x="14" y="1" width="12" height="7" rx="2" fill="#D4B26A"/>
+  <rect x="16.5" y="8" width="7" height="5" fill="#D4B26A"/>
+  <rect x="3" y="13" width="34" height="35" rx="10" fill="#111111" stroke="#D4B26A" stroke-width="2.5"/>
+  <text x="20" y="40" text-anchor="middle" font-family="'Bodoni Moda', Didot, Georgia, serif" font-style="italic" font-weight="600" font-size="26" fill="#D4B26A">S</text>
+</svg>

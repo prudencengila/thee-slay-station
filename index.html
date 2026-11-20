@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thee-Slay-station | Premium Perfumes in Uganda</title>
+    <meta name="description" content="Premium perfumes for men and women in Ntinda, Kampala. Free delivery on orders over 300,000 UGX with code SLAY25.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top banner (rotating messages) -->
+    <div class="top-banner">
+        <i class="fas fa-truck"></i>
+        <span id="bannerText">Complimentary delivery on orders over 300,000 UGX | Use code: <strong>SLAY25</strong></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <button class="icon-btn hamburger" id="menuToggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            <a href="#home" class="logo" aria-label="Thee-Slay-station home">
+                <svg class="logo-mark" viewBox="0 0 40 50" aria-hidden="true">
+                    <rect x="14" y="1" width="12" height="7" rx="2" fill="#D4B26A"/>
+                    <rect x="16.5" y="8" width="7" height="5" fill="#D4B26A"/>
+                    <rect x="3" y="13" width="34" height="35" rx="10" fill="none" stroke="#D4B26A" stroke-width="2.5"/>
+                    <text x="20" y="40" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-weight="700" font-size="26" fill="#8A6A2F">S</text>
+                </svg>
+                <span class="logo-text">
+                    <span class="logo-main">Thee <em>Slay</em></span>
+                    <span class="logo-sub">STATION</span>
+                </span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#women">Women's Collection</a></li>
+                <li><a href="#men">Men's Collection</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i><span class="badge" id="wishCount">0</span>
+                </button>
+                <button class="icon-btn" id="cartBtn" aria-label="Cart">
+                    <i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="home" aria-roledescription="carousel" aria-label="Featured">
+        <article class="slide active" style="--img:url('https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=1800&h=1000&fit=crop')">
+            <div class="slide-content">
+                <p class="hero-eyebrow">Ntinda · Kampala</p>
+                <h1 class="slide-title">Discover Your <em>Signature</em> Scent</h1>
+                <p class="slide-text">Premium perfumes for both men and women. Elevate your presence with Thee-Slay-station's exclusive collection in Kampala.</p>
+                <div class="hero-actions">
+                    <a href="#women" class="btn">Shop Women's</a>
+                    <a href="#men" class="btn btn-ghost">Shop Men's</a>
+                </div>
+            </div>
+        </article>
+        <article class="slide" style="--img:url('https://images.unsplash.com/photo-1594035910387-fea47794261f?w=1800&h=1000&fit=crop')">
+            <div class="slide-content">
+                <p class="hero-eyebrow">For Her</p>
+                <h2 class="slide-title">Elegant. <em>Captivating.</em> Unforgettable.</h2>
+                <p class="slide-text"><span data-count-of="women">19</span> fragrances for the modern woman, from <span data-from="women"></span>.</p>
+                <div class="hero-actions">
+                    <a href="#women" class="btn">Explore Women's</a>
+                </div>
+            </div>
+        </article>
+        <article class="slide" style="--img:url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=1800&h=1000&fit=crop')">
+            <div class="slide-content">
+                <p class="hero-eyebrow">For Him</p>
+                <h2 class="slide-title">Bold. <em>Sophisticated.</em> Commanding.</h2>
+                <p class="slide-text"><span data-count-of="men">17</span> fragrances for the distinguished gentleman, from <span data-from="men"></span>.</p>
+                <div class="hero-actions">
+                    <a href="#men" class="btn">Explore Men's</a>
+                </div>
+            </div>
+        </article>
+        <article class="slide" style="--img:url('https://images.unsplash.com/photo-1541643600914-78b084683601?w=1800&h=1000&fit=crop')">
+            <div class="slide-content">
+                <p class="hero-eyebrow">Exclusive Offer</p>
+                <h2 class="slide-title">Free Delivery on <em>300K+</em> Orders</h2>
+                <p class="slide-text">Use code <strong>SLAY25</strong> at checkout and we'll deliver your fragrances on us.</p>
+                <div class="hero-actions">
+                    <a href="#women" class="btn">Start Shopping</a>
+                    <a href="https://wa.me/256780478299" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fab fa-whatsapp"></i> Order on WhatsApp</a>
+                </div>
+            </div>
+        </article>
+
+        <button class="slider-arrow prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-arrow next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots" role="tablist"></div>
+        <div class="slide-counter"><strong id="slideNum">01</strong> / <span id="slideTotal">04</span></div>
+        <div class="slider-progress"><span></span></div>
+    </header>
+
+    <!-- Women's Collection -->
+    <section id="women" class="collection">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Women's Collection</h2>
+                <p>Elegant, captivating, and unforgettable fragrances designed for the modern woman.</p>
+            </div>
+            <div class="toolbar" data-collection="women">
+                <div class="chips">
+                    <button class="chip active" data-tier="all">All</button>
+                    <button class="chip" data-tier="everyday">Under 200K</button>
+                    <button class="chip" data-tier="signature">200K – 700K</button>
+                    <button class="chip" data-tier="luxury">Luxury 700K+</button>
+                </div>
+                <div class="toolbar-right">
+                    <span class="result-count"></span>
+                    <select class="sort-select" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name">Name: A – Z</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid" id="womenGrid"></div>
+            <div class="load-more-wrap"><button class="btn btn-outline load-more" data-collection="women">Show More</button></div>
+        </div>
+    </section>
+
+    <!-- Men's Collection -->
+    <section id="men" class="collection alt-bg">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Men's Collection</h2>
+                <p>Bold, sophisticated, and commanding fragrances for the distinguished gentleman.</p>
+            </div>
+            <div class="toolbar" data-collection="men">
+                <div class="chips">
+                    <button class="chip active" data-tier="all">All</button>
+                    <button class="chip" data-tier="everyday">Under 200K</button>
+                    <button class="chip" data-tier="signature">200K – 700K</button>
+                    <button class="chip" data-tier="luxury">Luxury 700K+</button>
+                </div>
+                <div class="toolbar-right">
+                    <span class="result-count"></span>
+                    <select class="sort-select" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name">Name: A – Z</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid" id="menGrid"></div>
+            <div class="load-more-wrap"><button class="btn btn-outline load-more" data-collection="men">Show More</button></div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="reveal">
+                <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=800&h=600&fit=crop" alt="Perfume bottles at Thee-Slay-station" class="about-image">
+            </div>
+            <div class="reveal">
+                <h2>About Thee-Slay-station</h2>
+                <p>Located in the heart of Ntinda, Kampala, Thee-Slay-station is your premier destination for authentic, high-quality perfumes. We believe that a fragrance is more than just a scent; it is a statement of identity, confidence, and style.</p>
+                <p>Whether you are looking for a subtle daily wear or a bold evening statement, our curated collection for both men and women guarantees you will find your perfect match. Enjoy complimentary delivery on all orders over 300,000 UGX with code <strong>SLAY25</strong>.</p>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Contact Us</h2>
+                <p>Visit us in Ntinda or reach out through any of our channels below.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Our Location</h3>
+                    <p>Ntinda, Kampala<br>Uganda</p>
+                </div>
+                <div class="contact-card reveal">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us</h3>
+                    <a href="tel:+256780478299">0780478299</a>
+                </div>
+                <div class="contact-card reveal">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/256780478299" target="_blank" rel="noopener">0780478299</a>
+                </div>
+                <div class="contact-card reveal">
+                    <i class="fas fa-clock"></i>
+                    <h3>Working Hours</h3>
+                    <p>Mon – Sat: 9:00 AM – 7:00 PM<br>Sun: 10:00 AM – 5:00 PM</p>
+                    <span class="open-status"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-cta">
+            <div class="footer-cta-inner">
+                <div>
+                    <span class="eyebrow">Join the Slay List</span>
+                    <h3>Be first to know about <em>new arrivals</em> &amp; exclusive offers</h3>
+                </div>
+                <div>
+                    <form class="newsletter" id="newsletterForm" novalidate>
+                        <input type="email" id="newsletterEmail" placeholder="Enter your email address" aria-label="Email address">
+                        <button type="submit"><span>Subscribe</span><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                    <p class="newsletter-note">No spam — just scents worth knowing about.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="#home" class="logo logo-light" aria-label="Thee-Slay-station home">
+                    <svg class="logo-mark" viewBox="0 0 40 50" aria-hidden="true">
+                    <rect x="14" y="1" width="12" height="7" rx="2" fill="#D4B26A"/>
+                    <rect x="16.5" y="8" width="7" height="5" fill="#D4B26A"/>
+                    <rect x="3" y="13" width="34" height="35" rx="10" fill="none" stroke="#D4B26A" stroke-width="2.5"/>
+                    <text x="20" y="40" text-anchor="middle" font-family="Bodoni Moda, serif" font-style="italic" font-weight="700" font-size="26" fill="#D4B26A">S</text>
+                </svg>
+                    <span class="logo-text">
+                        <span class="logo-main">Thee <em>Slay</em></span>
+                        <span class="logo-sub">STATION</span>
+                    </span>
+                </a>
+                <p>Your trusted source for authentic, premium men's and women's fragrances in Kampala, Uganda.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/256780478299" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#women">Women's Collection</a></li>
+                    <li><a href="#men">Men's Collection</a></li>
+                    <li><a href="#women" data-filter="women:everyday">Women's Under 200K</a></li>
+                    <li><a href="#men" data-filter="men:luxury">Men's Luxury 700K+</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#" data-info="shipping">Shipping Policy</a></li>
+                    <li><a href="#" data-info="returns">Returns &amp; Exchanges</a></li>
+                    <li><a href="#" data-info="faq">FAQ</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Visit Us</h4>
+                <ul class="visit-list">
+                    <li><i class="fas fa-map-marker-alt"></i><span>Ntinda, Kampala, Uganda</span></li>
+                    <li><i class="fas fa-phone-alt"></i><span><a href="tel:+256780478299">0780478299</a><br><small>Calls &amp; WhatsApp</small></span></li>
+                    <li><i class="fas fa-clock"></i><span>Mon – Sat: 9 AM – 7 PM<br>Sun: 10 AM – 5 PM<br><span class="open-status"></span></span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <p>&copy; <span id="year"></span> Thee-Slay-station. All rights reserved.</p>
+                <p>Crafted with <i class="fas fa-heart heart"></i> in Kampala</p>
+                <div class="footer-bottom-links">
+                    <a href="#" data-info="shipping">Shipping</a>
+                    <a href="#" data-info="returns">Returns</a>
+                    <a href="#home">Back to top <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ Overlays ============ -->
+    <div class="backdrop" id="backdrop"></div>
+
+    <!-- Cart drawer -->
+    <aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+        <div class="drawer-header">
+            <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+            <button class="icon-btn close-drawer" aria-label="Close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="free-ship" id="freeShip"></div>
+        <div class="drawer-body" id="cartItems"></div>
+        <div class="drawer-footer" id="cartFooter">
+            <form class="promo" id="promoForm">
+                <input type="text" id="promoInput" placeholder="Promo code" aria-label="Promo code">
+                <button type="submit">Apply</button>
+            </form>
+            <p class="promo-msg" id="promoMsg"></p>
+            <div class="summary-row"><span>Subtotal</span><span id="subtotal">0 UGX</span></div>
+            <div class="summary-row"><span>Delivery</span><span id="delivery">—</span></div>
+            <div class="summary-row total"><span>Total</span><span id="total">0 UGX</span></div>
+            <button class="btn checkout-btn" id="checkoutBtn"><i class="fab fa-whatsapp"></i> Checkout on WhatsApp</button>
+            <button class="link-btn" id="clearCart">Clear cart</button>
+        </div>
+    </aside>
+
+    <!-- Wishlist drawer -->
+    <aside class="drawer" id="wishDrawer" aria-label="Wishlist">
+        <div class="drawer-header">
+            <h3><i class="fas fa-heart"></i> Wishlist</h3>
+            <button class="icon-btn close-drawer" aria-label="Close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="drawer-body" id="wishItems"></div>
+    </aside>
+
+    <!-- Search overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search perfumes… e.g. Yara, Dior, 9PM" autocomplete="off">
+            <button class="icon-btn" id="closeSearch" aria-label="Close search"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div>
+
+    <!-- Modal (quick view / info) -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="icon-btn modal-close" id="modalClose" aria-label="Close"><i class="fas fa-times"></i></button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Toasts & back to top -->
+    <div class="toast-container" id="toasts"></div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>
